@@ -14,12 +14,12 @@ export const theme = {
   },
   font: {
     size: {
-      xl: '2.625rem',
-      lg: '2.25rem',
-      l: '2rem',
-      m: '1.125rem',
-      s: '1rem',
-      xs: '0.875rem',
+      xl: '42px',
+      lg: '38px',
+      l: '36px',
+      m: '18px',
+      s: '16px',
+      xs: '14px',
     },
     family: {
       inter: 'Inter, sans-serif',
@@ -30,6 +30,6 @@ export const theme = {
     phone: '@media (min-width: 412px)',
     tablet: '@media (min-width: 768px)',
     desktop: '@media (min-width: 960px)',
-    bigDesktop: '@media (min-width: 1550px)',
+    bigDesktop: '@media (min-width: 1920px)',
   },
 };

@@ -1,9 +1,11 @@
 import PaletColors from '../../assets/colors/PaletColors';
 
 export const theme = {
+
   color: {
     white: `${PaletColors["white"]}`,
     primary800: `${PaletColors["primary-800"]}`,
+    primary700: `${PaletColors["primary-700"]}`,
     primary600: `${PaletColors["primary-600"]}`,
     primary100: `${PaletColors["primary-100"]}`,
     primary50: `${PaletColors["primary-50"]}`,

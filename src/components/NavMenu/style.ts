@@ -19,10 +19,9 @@ export const MenuWrapper = styled.div`
 > img {
     width: 80px;
 
-
 }
   ${({ theme }) => theme.mq.desktop} {
-    > img {
+    > .hamburger {
       display: none;
     }
   };
@@ -36,19 +35,25 @@ export const MenuDiv = styled.div`
     justify-content: center;
     list-style: none;
     > li {
-    /*   background: ${({ theme }) => theme.color.primary600}; */
       border-radius: 4px;
-      border-bottom: 2px solid ${({ theme }) => theme.color.primary600};
-      color: ${({ theme }) => theme.color.grey700};
       cursor: pointer;
-      font-size: ${({ theme }) => theme.font.size.xs};
       line-height: 24px;
       text-align: center;
       padding: 14px 24px;
+      > .navlink {
+        color: ${({ theme }) => theme.color.grey700};
+        font-size: ${({ theme }) => theme.font.size.xs};
+        transition: all .3s easy-in-out;
+        text-decoration: none;
+        :hover {
+          color: ${({ theme }) => theme.color.primary700};
+        }
+      }
     }
   }
   ${({ theme }) => theme.mq.desktop} {
-    display: inline-block;
+    display: flex;
+    align-items: center;
   };
 `;
 

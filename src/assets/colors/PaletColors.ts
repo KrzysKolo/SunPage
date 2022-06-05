@@ -1,5 +1,6 @@
 const PaletColors = {
   "primary-800": "#3F69BF",
+  "primary-700": "#5086F2",
   "primary-600": "#6E9EFF",
   "primary-100": "#E5EEFF",
   "primary-50": "#F7F9FF",

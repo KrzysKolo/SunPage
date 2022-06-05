@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import { HamburgerButtonWrapper } from './style'
+import React, { Dispatch, SetStateAction, useState } from 'react';
+import { HamburgerButtonWrapper } from './style';
 
-const HamburgerButton = () => {
-  const [click, setClick] = useState(false);
-  const hangeButton = () => {
-    setClick(!click)
-    console.log("Aasasas");
-  }
+export type HamburgerButtonProps = {
+  click: boolean;
+  onClick: () => void;
+}
+
+const HamburgerButton:React.FC<HamburgerButtonProps> = ({  onClick, click }) => {
+
   return (
-    <HamburgerButtonWrapper onClick={hangeButton}>
+    <HamburgerButtonWrapper onClick={onClick}>
       <div className={click ? 'burger-click' : 'burger'}></div>
     </HamburgerButtonWrapper>
   )

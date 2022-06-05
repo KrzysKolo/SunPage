@@ -8,7 +8,8 @@ import { GlobalStyle } from './assets/styles/GlobalStyles';
 import { theme } from './assets/styles/theme';
 
 
-function App() {
+const App = () => {
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />

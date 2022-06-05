@@ -2,8 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 export interface PropsGlobalStyle {
   outLine?: string;
-}
-
+  showSmallMenu?: boolean;
+};
 
 export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Poppins:wght@500;600&display=swap');

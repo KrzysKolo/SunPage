@@ -1,14 +1,34 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction, useContext, useEffect, useState } from 'react';
 import { Container } from '../../assets/styles/styles';
-import { NavWrapper, LogoDiv, MenuDiv, MenuWrapper } from './style';
-import { Button } from '../../components'
+import { NavWrapper, LogoDiv, MenuWrapper } from './style';
 import sunPage from '../../assets/svgs/SunPage.svg';
-import burger from '../../assets/images/burger.png';
-import { Link, NavLink } from 'react-router-dom';
-import { Close, HamburgerButton } from '../Hemburger';
+import { Link } from 'react-router-dom';
+import { HamburgerButton } from '../Hemburger';
+import { MenuContext, SmallMenuType } from '../../context/menuContext';
+import MenuDiv from '../menu/MenuDiv/MenuDiv';
+import { MenuDivSmall } from '../menu';
 
-const NavMenu = () => {
+
+const NavMenu: React.FC = () => {
+  const {
+    showSmallMenu,
+    setShowSmallMenu,
+  } = useContext(MenuContext) as SmallMenuType;
+
+  const [show, setShow] = useState<boolean>(showSmallMenu);
+  const [click, setClick] = useState<boolean>(false);
+
+  useEffect(() => {
+    setShow(showSmallMenu);
+  }, [showSmallMenu, setShowSmallMenu])
+
+  const handleChangeShowSmallMenu = () => {
+    setClick(!click);
+    setShowSmallMenu(!showSmallMenu);
+  };
+
   return (
+
     <Container>
       <NavWrapper>
         <LogoDiv>
@@ -18,31 +38,12 @@ const NavMenu = () => {
         </LogoDiv>
         <MenuWrapper>
           <div className='hamburger'>
-            <HamburgerButton />
+            <HamburgerButton click={click} onClick={handleChangeShowSmallMenu} />
           </div>
-          <MenuDiv>
-            <ul>
-              <div className="closed">
-                <Close />
-              </div>
-              <li>
-                <NavLink to="#" className='navlink'>
-                  O nas
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#" className='navlink'>
-                  Blog
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#" className='navlink'>
-                  Kontakt
-                </NavLink>
-              </li>
-            </ul>
-            <Button btnText='Porozmawiajmy' btnLink='#' />
-          </MenuDiv>
+          { showSmallMenu
+            ? (<MenuDivSmall showSmallMenu={show} />)
+            : (<MenuDiv />)
+          }
         </MenuWrapper>
       </NavWrapper>
     </Container>

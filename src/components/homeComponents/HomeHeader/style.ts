@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import  PaletColors from '../../../assets/colors/PaletColors';
 
 export const HomeHeaderWrapper = styled.section`
   align-items: center;

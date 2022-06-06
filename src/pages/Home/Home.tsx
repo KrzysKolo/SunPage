@@ -1,12 +1,13 @@
 import React from 'react';
 import { Container } from '../../assets/styles/styles';
-import { HomeHeader } from '../../components';
+import { HomeHeader, SectionOne } from '../../components';
 
 const Home = () => {
   return (
     <main>
       <Container>
         <HomeHeader />
+        <SectionOne />
       </Container>
     </main>
   )

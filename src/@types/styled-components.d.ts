@@ -1,6 +1,6 @@
 import 'styled-components';
 
-type ColorType = 'primary800' | 'primary700' | 'primary600' | 'primary100' | 'primary50'| 'grey900' | 'grey800'| 'grey700' | 'grey50' | 'white' ;
+type ColorType = 'primary800' | 'primary700' | 'primary600' | 'primary100' | 'primary50'| 'grey900' | 'grey800'| 'grey700' | 'grey50' | 'white' | 'beige' ;
 type FontFamilyType = 'poppins' | 'inter';
 type FontSizeType = 'xl' | 'lg' | 'l' |  'm' | 's'  | 'xs';
 type MediaQueryType = 'phone' | 'tablet' | 'desktop' | 'bigDesktop' ;

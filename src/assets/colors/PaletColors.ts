@@ -9,6 +9,7 @@ const PaletColors = {
   "grey-700": "#858993",
   "grey-50": "#F9F9FA",
   "white": "#FFFFFF",
+  "beige": "#E5E5E5",
 };
 
 export default PaletColors;

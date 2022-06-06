@@ -3,6 +3,7 @@ import PaletColors from '../../assets/colors/PaletColors';
 export const theme = {
 
   color: {
+    beige: `${PaletColors["beige"]}`,
     white: `${PaletColors["white"]}`,
     primary800: `${PaletColors["primary-800"]}`,
     primary700: `${PaletColors["primary-700"]}`,

@@ -67,6 +67,9 @@ export const HeaderDiv = styled.div`
     }
   };
   ${({ theme }) => theme.mq.desktop} {
+    display: flex;
+    height: 100%;
+    width: 50%
      > div {
         width: 100%;
         display: flex;
@@ -129,7 +132,7 @@ export const HeaderDiv = styled.div`
 `;
 
 export const ImgDiv = styled.div`
-  max-height: 80vh;
+  max-height: 60vh;
   margin: 0 auto;
   object-fit: cover;
   display: flex;
@@ -187,8 +190,8 @@ export const ImgDiv = styled.div`
     overflow:hidden;
     > .small {
       display: flex;
+      min-width: 100%;
       object-fit: cover;
-      max-height: 80vh;
     }
     > .big {
       display: none;
@@ -230,10 +233,11 @@ export const ImgDiv = styled.div`
   };
   ${({ theme }) => theme.mq.tablet} {
     object-fit: cover;
+    min-height: 100%;
     width: 50%;
     overflow:hidden;
     > .small {
-      height: 88%;
+      min-width: 100%;
       object-fit: cover;
     }
     > .big {

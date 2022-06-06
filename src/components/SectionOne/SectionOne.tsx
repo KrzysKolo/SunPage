@@ -5,8 +5,6 @@ import { ArticleWithIcon } from '../articleComponents/';
 import { SectionOneWrapper, TitleWrapper, SectionContainer, ArticleWrapper } from './style';
 import icon1 from '../../assets/svgs/Icon.svg';
 
-
-
 const SectionOne = () => {
   return (
     <SectionOneWrapper>

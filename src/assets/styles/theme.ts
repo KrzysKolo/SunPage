@@ -13,6 +13,7 @@ export const theme = {
     grey900: `${PaletColors["grey-900"]}`,
     grey800: `${PaletColors["grey-800"]}`,
     grey700: `${PaletColors["grey-700"]}`,
+    grey200: `${PaletColors["grey-200"]}`,
     grey50: `${PaletColors["grey-50"]}`,
   },
   font: {

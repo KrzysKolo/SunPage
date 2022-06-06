@@ -4,7 +4,6 @@ export const Container = styled.section`
 
   ${({ theme }) => theme.mq.phone} {
     max-width: 767px
-
   };
   ${({ theme }) => theme.mq.tablet} {
     max-width: 959px;

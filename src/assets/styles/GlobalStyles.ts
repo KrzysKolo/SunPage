@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export interface PropsGlobalStyle {
   outLine?: string;
   showSmallMenu?: boolean;
+  side?: string;
 };
 
 export const GlobalStyle = createGlobalStyle`

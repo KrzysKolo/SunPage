@@ -1,3 +1,4 @@
+export { default as ArticleWithButton } from './articleComponents/ArticleWithButton';
 export { default as ArticleWithIcon } from './articleComponents/ArticleWithIcon';
 export { default as Button } from './Button';
 export { default as Footer } from './Footer';
@@ -8,3 +9,4 @@ export { default as NavMenu } from './NavMenu';
 export { default as TitleSection } from './titleComponents/TitleSection'
 export { default as SubTitleSection } from './titleComponents/SubTitleSection'
 export { default as SectionOne } from './SectionOne';
+export { default as SectionTwo } from './SectionTwo';

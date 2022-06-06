@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Container } from '../../assets/styles/styles';
 import { NavWrapper, LogoDiv, MenuWrapper } from './style';
 import sunPage from '../../assets/svgs/SunPage.svg';
@@ -13,10 +13,11 @@ const NavMenu: React.FC = () => {
   const {
     showSmallMenu,
     setShowSmallMenu,
+    click,
+    setClick,
   } = useContext(MenuContext) as SmallMenuType;
 
   const [show, setShow] = useState<boolean>(showSmallMenu);
-  const [click, setClick] = useState<boolean>(false);
 
   useEffect(() => {
     setShow(showSmallMenu);
@@ -28,25 +29,31 @@ const NavMenu: React.FC = () => {
   };
 
   return (
-
-    <Container>
-      <NavWrapper>
-        <LogoDiv>
-          <Link to="/">
-            <img src={sunPage} alt="logo SunPage" />
-          </Link>
-        </LogoDiv>
-        <MenuWrapper>
-          <div className='hamburger'>
-            <HamburgerButton click={click} onClick={handleChangeShowSmallMenu} />
-          </div>
-          { showSmallMenu
-            ? (<MenuDivSmall showSmallMenu={show} />)
-            : (<MenuDiv />)
-          }
-        </MenuWrapper>
-      </NavWrapper>
-    </Container>
+    <header>
+      <Container>
+        <NavWrapper>
+          <LogoDiv>
+            <Link to="/">
+              <img src={sunPage} alt="logo SunPage" />
+            </Link>
+          </LogoDiv>
+          <MenuWrapper>
+            <div className='hamburger'>
+              <HamburgerButton click={click} onClick={handleChangeShowSmallMenu} />
+            </div>
+            { showSmallMenu
+              ? (<MenuDivSmall
+                showSmallMenu={show}
+                setShowSmallMenu={setShowSmallMenu}
+                click={click}
+                setClick={setClick}
+              />)
+              : (<MenuDiv />)
+            }
+          </MenuWrapper>
+        </NavWrapper>
+      </Container>
+    </header>
   )
 }
 

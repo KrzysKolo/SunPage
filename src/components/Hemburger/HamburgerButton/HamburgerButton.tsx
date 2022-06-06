@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useState } from 'react';
+import React from 'react';
 import { HamburgerButtonWrapper } from './style';
 
 export type HamburgerButtonProps = {

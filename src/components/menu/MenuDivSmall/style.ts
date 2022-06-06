@@ -7,13 +7,14 @@ export const MenuDivSmallWrapper = styled(MenuDivWrapper)<PropsGlobalStyle>`
   background: white;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
   left: 0;
   opacity: ${(props) => props.showSmallMenu ? '1' : '0'};
   position: absolute;
   right: 0;
   top: 58px;
   transition: ${(props) => props.showSmallMenu ? '1.8s' : '1.8s'};
+  z-index: 999999999!important;
   > ul {
     flex-direction: column;
     margin-bottom: 4rem;

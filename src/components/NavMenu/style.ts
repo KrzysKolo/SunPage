@@ -19,7 +19,6 @@ export const NavWrapper = styled.div`
 export const MenuWrapper = styled.div`
 > img {
     width: 80px;
-
 }
   ${({ theme }) => theme.mq.desktop} {
     > .hamburger {
@@ -27,9 +26,6 @@ export const MenuWrapper = styled.div`
     }
   };
 `;
-
-
-
 export const LogoDiv = styled.div`
   width: 100px;
   height: 22px;

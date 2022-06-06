@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { Home } from './pages';
+import { Home, Contact, Blog } from './pages';
 import { Footer, NavMenu } from './components';
 import './App.css';
 import { GlobalStyle } from './assets/styles/GlobalStyles';
@@ -16,6 +16,8 @@ const App = () => {
       <Router>
         <NavMenu />
         <Routes>
+          <Route path="/kontakt" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/" element={<Home />} />
         </Routes>
         <Footer />

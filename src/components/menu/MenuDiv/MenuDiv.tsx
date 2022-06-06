@@ -8,22 +8,22 @@ const MenuDiv = () => {
     <MenuDivWrapper>
       <ul>
         <li>
-          <NavLink to="#" className='navlink'>
+          <NavLink to="/" className='navlink'>
             O nas
           </NavLink>
         </li>
         <li>
-          <NavLink to="#" className='navlink'>
+          <NavLink to="/blog" className='navlink'>
             Blog
           </NavLink>
         </li>
         <li>
-          <NavLink to="#" className='navlink'>
+          <NavLink to="kontakt" className='navlink'>
             Kontakt
           </NavLink>
         </li>
       </ul>
-      <Button btnText='Porozmawiajmy' btnLink='#' />
+      <Button btnText='Porozmawiajmy' btnLink='/' />
     </MenuDivWrapper>
   )
 }

@@ -4,89 +4,88 @@ import { PropsGlobalStyle } from '../../../assets/styles/GlobalStyles';
 export const ArticleWithButtonWrapper = styled.div<PropsGlobalStyle>`
   display: none;
   ${({ theme }) => theme.mq.tablet} {
-    background: ${({ theme }) => theme.color.white};
-    width: 100vw;
-    display: flex;
     align-items: center;
+    background: ${({ theme }) => theme.color.white};
+    display: flex;
+    flex-direction: ${(props) => props.side === "left" ? `row-reverse` : `row`};
     justify-content: space-between;
+    margin: 5rem auto;
     max-width: 960px;
     width: 90vw;
-    margin: 5rem auto;
-    flex-direction: ${(props) => props.side === "left" ? `row-reverse` : `row`};
   }
   ${({ theme }) => theme.mq.desktop} {
+    margin: 4rem auto;
     max-width: 1360px;
     width: 90%;
-    margin: 4rem auto;
   }
   ${({ theme }) => theme.mq.bigDesktop} {
-    width: 1360px;
     margin: 0 auto;
+    width: 1360px;
    }
 `;
 
 export const TextDiv = styled.div<PropsGlobalStyle>`
   display: none;
   ${({ theme }) => theme.mq.tablet} {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     margin: 1rem 1.5rem;
-    width: 50vw;
     padding-right: 5rem;
+    width: 50vw;
    }
   ${({ theme }) => theme.mq.desktop} {
-    width: 50%;
-    height: 50%;
-    padding-right: ${(props) => props.side === "left" ? `5rem` : `0`};
-    padding-left: ${(props) => props.side === "left" ? `0` : `5rem`};
+    align-items: ${(props) => props.side === "left" ? `flex-end` : `flex-start`};
     display: flex;
     flex-direction: column;
-    align-items: ${(props) => props.side === "left" ? `flex-end` : `flex-start`};
+    height: 50%;
     justify-content: center;
+    padding-right: ${(props) => props.side === "left" ? `5rem` : `0`};
+    padding-left: ${(props) => props.side === "left" ? `0` : `5rem`};
+    width: 50%;
   }
   ${({ theme }) => theme.mq.bigDesktop} {
-    width: 548px;
     height: 548px;
     padding-right: 200px
+    width: 548px;
   }
 `;
 
 export const ImageDiv = styled.div`
 display: none;
 ${({ theme }) => theme.mq.tablet} {
+  border-radius: 8px;
   display: inline-block;
-  width: 330px;
   height: 330px;
   object-fit: cover;
-  border-radius: 8px;
+  width: 330px;
   > img {
-    width: 330px;
-    height: 330px;
     border-radius: 8px;
+    height: 330px;
+    width: 330px;
   }
 }
 ${({ theme }) => theme.mq.desktop} {
-  width: 380px;
+  border-radius: 8px;
   height: 380px;
   object-fit: cover;
-  border-radius: 8px;
+  width: 380px;
   > img {
-    width: 100%;
-    height: 100%;
     border-radius: 8px;
+    height: 100%;
+    width: 100%;
   }
 }
 ${({ theme }) => theme.mq.bigDesktop} {
-  width: 548px;
+  border-radius: 8px;
   height: 548px;
   object-fit: cover;
-  border-radius: 8px;
+  width: 548px;
   > img {
-    width: 548px;
-    height: 548px;
     border-radius: 8px;
+    height: 548px;
+    width: 548px;
   }
 }
 `;
@@ -102,36 +101,36 @@ export const TextP = styled.p`
   `;
 
 export const ArticleWithButtonWrapperSmall = styled.div`
-background: ${({ theme }) => theme.color.white};
-width: 100vw;
-min-width: 315px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-between;
-padding: 3rem 2rem;
-${({ theme }) => theme.mq.tablet} {
-  display: none;
-}
+  align-items: center;
+  background: ${({ theme }) => theme.color.white};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 315px;
+  padding: 3rem 2rem;
+  width: 100vw;
+  ${({ theme }) => theme.mq.tablet} {
+    display: none;
+  }
 `;
 
 export const TextImageDiv = styled.div`
-display: flex;
-flex-direction: column-reverse;
-align-items: center;
-> div {
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  padding: 0 3rem;
-}
-> img {
-  width: 180px;
-  height: 180px;
-  border-radius: 8px;
-}
-${({ theme }) => theme.mq.tablet} {
-  display: none;
-}
+  flex-direction: column-reverse;
+  > div {
+    display: flex;
+    flex-direction: column;
+    padding: 0 3rem;
+  }
+  > img {
+    border-radius: 8px;
+    height: 180px;
+    width: 180px;
+  }
+  ${({ theme }) => theme.mq.tablet} {
+    display: none;
+  }
 `;
 
 export const TextButtonDiv = styled.div`

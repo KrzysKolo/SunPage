@@ -11,8 +11,8 @@ export const NavWrapper = styled.div`
   padding: 14px 0;
   position: relative;
   ${({ theme }) => theme.mq.bigDesktop} {
-    max-width: 1360px;
     background: white;
+    max-width: 1360px;
   };
 `;
 

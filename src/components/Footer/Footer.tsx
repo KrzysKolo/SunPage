@@ -1,9 +1,13 @@
 import React from 'react';
-import { Container } from './style';
+import { FooterInfo } from '../footerComponents';
+import  FooterMenu from '../footerComponents/FooterMenu/FooterMenu';
 
 const Footer = () => {
   return (
-    <Container>Footer</Container>
+    <>
+      <FooterMenu />
+      <FooterInfo />
+    </>
   )
 }
 

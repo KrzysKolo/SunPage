@@ -1,5 +1,5 @@
 # SunPage
-<img src="demo/demo.png" alt="StarWares" width="550px">
+<img src="demo/demo.png" alt="SunPage" width="550px">
 To test the applications <a target="_blank" href="http://kk-projekt-3.net.pl/">Click here </a>
 
 # Built With
@@ -8,7 +8,6 @@ To test the applications <a target="_blank" href="http://kk-projekt-3.net.pl/">C
  - React-Router
  - useContext
  - Styld-Components
- - AOS
  
 # Getting Started
 

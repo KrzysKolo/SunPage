@@ -4,6 +4,7 @@ export interface PropsGlobalStyle {
   outLine?: string;
   showSmallMenu?: boolean;
   side?: string;
+  image?: string;
 };
 
 export const GlobalStyle = createGlobalStyle`

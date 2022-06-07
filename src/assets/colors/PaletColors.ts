@@ -7,6 +7,7 @@ const PaletColors = {
   "grey-900": "#242529",
   "grey-800": "#696C74",
   "grey-700": "#858993",
+  "grey-600": "#9BA0AC",
   "grey-200": "#DEE1E6",
   "grey-50": "#F9F9FA",
   "white": "#FFFFFF",

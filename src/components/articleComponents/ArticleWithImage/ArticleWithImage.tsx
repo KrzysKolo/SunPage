@@ -1,28 +1,31 @@
 import React from 'react';
-import { SubTitleSection, TitleSection } from '../../titleComponents';
+import { TitleCategory } from '../../titleComponents';
 import { ArticleWithImageWrapper, Text, TextDiv, ImageDiv, DateDiv, IconDiv, TextH4 } from './style';
+import calendar from '../../../assets/svgs/Vector.svg';
+import SmallTitleArticle from '../../titleComponents/SmallTitleArticle';
 
 export type ArticleWithImageProps = {
   image: string,
   title: string,
-  subTitle: string,
+  titleCategory: string,
   text: string,
   dateOfEntry: string
 }
 
-const ArticleWithImage:React.FC<ArticleWithImageProps> = ({ image, title, subTitle, text, dateOfEntry }) => {
+const ArticleWithImage:React.FC<ArticleWithImageProps> = ({ image, title, titleCategory, text, dateOfEntry }) => {
+
   return (
     <ArticleWithImageWrapper>
-      <ImageDiv>
-        <img src={image} alt='icon' />
-      </ImageDiv>
+      <ImageDiv image={image} />
       <TextDiv>
-        <SubTitleSection title={subTitle} />
-        <TitleSection title={title} />
+        <TitleCategory text={titleCategory} />
+        <SmallTitleArticle title={title} />
         <Text>{text}</Text>
       </TextDiv>
       <DateDiv>
-        <IconDiv></IconDiv>
+        <IconDiv>
+          <img src={calendar} alt='calendar ico' />
+        </IconDiv>
         <TextH4>{dateOfEntry}</TextH4>
       </DateDiv>
     </ArticleWithImageWrapper>

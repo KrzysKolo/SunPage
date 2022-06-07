@@ -12,3 +12,4 @@ export const TextDivWrapper = styled.div`
     max-width: 50vw;
   }
 `;
+

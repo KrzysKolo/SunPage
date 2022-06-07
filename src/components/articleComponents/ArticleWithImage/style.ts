@@ -8,7 +8,7 @@ export const ArticleWithImageWrapper = styled.article`
   justify-content: flex-start;
   margin: 20px 10px;
   :nth-child(odd) {
-    background: pink;
+    background: ${({ theme }) => theme.color.primary50};
   }
   ${({ theme }) => theme.mq.desktop} {
     :nth-child(odd) {

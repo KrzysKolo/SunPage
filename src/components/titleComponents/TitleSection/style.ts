@@ -6,6 +6,6 @@ export const TitleSectionWrapper = styled.h2`
   font-size: 32px;
   font-weight: 600;
   line-height: 48px;
-  padding: 0;
   margin: 0;
+  padding: 0;
 `;

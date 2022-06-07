@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from '../../assets/styles/styles';
-import { HomeHeader, SectionOne, SectionTwo } from '../../components';
+import { HomeHeader, SectionOne, SectionThree, SectionTwo, SectionFour} from '../../components';
 
 const Home = () => {
   return (
@@ -9,6 +9,8 @@ const Home = () => {
         <HomeHeader />
         <SectionOne />
         <SectionTwo />
+        <SectionThree />
+        <SectionFour />
       </Container>
     </main>
   )

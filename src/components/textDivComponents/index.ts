@@ -1,0 +1,1 @@
+export { default as TextDiv } from './TextDiv/TextDiv';

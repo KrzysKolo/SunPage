@@ -5,6 +5,7 @@ export interface PropsGlobalStyle {
   showSmallMenu?: boolean;
   side?: string;
   image?: string;
+  checked?: boolean ;
 };
 
 export const GlobalStyle = createGlobalStyle`

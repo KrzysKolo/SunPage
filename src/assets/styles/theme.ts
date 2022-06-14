@@ -14,6 +14,7 @@ export const theme = {
     grey800: `${PaletColors["grey-800"]}`,
     grey700: `${PaletColors["grey-700"]}`,
     grey600: `${PaletColors["grey-600"]}`,
+    grey500: `${PaletColors["grey-500"]}`,
     grey200: `${PaletColors["grey-200"]}`,
     grey100: `${PaletColors["grey-100"]}`,
     grey50: `${PaletColors["grey-50"]}`,

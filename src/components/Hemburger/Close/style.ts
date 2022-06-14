@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const WrapperClose = styled.div`
-  width: 30px;
-  height: 30px;
+  background: black;
   color: white;
+  height: 30px;
   font-size: 28px;
   font-weight: bold;
-  background: black;
+  width: 30px;
 `;

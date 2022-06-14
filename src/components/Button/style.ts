@@ -4,7 +4,6 @@ import { PropsGlobalStyle } from '../../assets/styles/GlobalStyles';
 
 export const WrapperBtn = styled.div<PropsGlobalStyle>`
   .button {
-    position: relative;
     background-color: ${(props) => props.outLine ? `${PaletColors["white"]}` : `${PaletColors["primary-600"]}`};
     border: ${(props) => props.outLine ? `2px solid ${PaletColors["primary-600"]}` : `none`};
     border-radius: 4px;
@@ -13,6 +12,7 @@ export const WrapperBtn = styled.div<PropsGlobalStyle>`
     font-size: ${({ theme }) => theme.font.size.s};
     font-weight: 500;
     padding: 16px 32px;
+    position: relative;
     transition: all 0.3s easy-in-out;
     text-decoration: none;
     :hover {

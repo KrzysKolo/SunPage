@@ -31,8 +31,14 @@ export const TextH3 = styled.h3`
   font-weight: 500;
   line-height: 24px;
   padding-bottom: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
-  width: 30vw;
+  width: 90vw;
+  ${({ theme }) => theme.mq.tablet} {
+    width: 30vw;
+    min-367px;
+  };
 `;
 
 export const TextP = styled(TextH3)`

@@ -14,6 +14,7 @@ export const SectionFourWrapper = styled.div`
     max-width: 1360px;
   };
 `;
+
 export const HeaderDiv = styled.div`
   align-items: center;
   display: flex;

@@ -67,7 +67,7 @@ export const HeaderDiv = styled.div`
   };
   ${({ theme }) => theme.mq.desktop} {
     display: flex;
-    height: 100%;
+    height: 800px;
     width: 50%
      > div {
         width: 100%;
@@ -249,14 +249,14 @@ export const ImgDiv = styled.div`
   ${({ theme }) => theme.mq.desktop} {
     object-fit: cover;
     width: 50%;
-    min-height: 100% ;
+    height: 800px ;
 
     > .small {
       display: none;
     }
     > .big {
       display: inline-block;
-      min-width: 100%;
+      width: 100%;
       object-fit: cover;
      }
   }

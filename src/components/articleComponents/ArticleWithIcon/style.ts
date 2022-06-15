@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const ArticleWithIconWrapper = styled.article`
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   padding: 0 5px;
   :nth-child(odd) {
     background: ${({ theme }) => theme.color.primary50};
@@ -22,7 +23,9 @@ export const ArticleWithIconWrapper = styled.article`
     align-items: flex-start;
     flex-direction: row;
     justify-content: flex-start;
-    width: 400px
+    max-width: 495px;
+    margin: 0 10px;
+    padding: 0;
   }
   ${({ theme }) => theme.mq.bigDesktop} {
     max-width: 495px;

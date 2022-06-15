@@ -9,19 +9,19 @@ export const HomeHeaderWrapper = styled.section`
   max-width: 100vw;
   max-height: 800px;
   ${({ theme }) => theme.mq.phone} {
-    max-width: 100vw;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    max-width: 100vw;
   }
   ${({ theme }) => theme.mq.tablet} {
-    max-width: 100vw;
     display: flex;
     flex-direction: row;
-    height: 70vh ;
+    height: 70vh;
+    max-width: 100vw;
   }
   ${({ theme }) => theme.mq.desktop} {
-    height: 90vh;
+    height: 800px;
   }
   ${({ theme }) => theme.mq.bigDesktop} {
     height: 800px;
@@ -36,23 +36,24 @@ export const HeaderDiv = styled.div`
     background: rgba(36, 37, 41, 1);
     display: flex;
     height: 100%;
+    max-height: 800px;
     width: 50%;
      > div {
        align-items: flex-start;
        display: flex;
        flex-direction: column;
        justify-content: space-around;
-       margin-left: 5vw;
+       margin-left: 4vw;
        padding: 12vh 0;
-       width: 100%;
+       width: 800px;
       > h1 {
         color: ${({ theme }) => theme.color.white};
         font-family: ${({ theme }) => theme.font.family.poppins};
         font-size: ${({ theme }) => theme.font.size.lg};
         font-weight: 600;
         line-height: 50px;
-        margin-bottom: 20px;
-        width: 70%;
+        padding-bottom: 20px;
+        width: 80%;
       }
       > p {
         color: ${({ theme }) => theme.color.white};
@@ -60,47 +61,40 @@ export const HeaderDiv = styled.div`
         font-size: ${({ theme }) => theme.font.size.m};
         font-weight: 400;
         line-height: 30px;
-        margin-bottom: 32px;
-        width: 70%;
+        padding-bottom: 32px;
+        width: 90%;
       }
     }
   };
   ${({ theme }) => theme.mq.desktop} {
     display: flex;
-    height: 800px;
-    width: 50%
+    justify-content: flex-start;
+    padding:  0;
+    width: 50%;
      > div {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: space-between;
+       align-items: left;
+       display: flex;
+       flex-direction: column;
+       width: 100%;
       > h1 {
-        font-size: ${({ theme }) => theme.font.size.lg};
-        font-family: ${({ theme }) => theme.font.family.poppins};
-        font-weight: 600;
-        color: ${({ theme }) => theme.color.white};
         line-height: 62px;
-        width: 70%;
         margin-bottom: 32px;
+        width: 90%;
      }
       > p {
-        font-size: ${({ theme }) => theme.font.size.m};
-        font-family: ${({ theme }) => theme.font.family.inter};
-        font-weight: 400;
-        color: ${({ theme }) => theme.color.white};
         line-height: 30px;
-        width: 85%;
-        margin-bottom: 42px;
+        margin-bottom: 40px;
+        width: 65%;
       }
     }
   }
   ${({ theme }) => theme.mq.bigDesktop} {
+    align-items: space-between;
     display: flex;
     flex-direction: column;
-    align-items: space-between;
     height: 800px;
-    width: 50%;
     padding: 8rem 0 ;
+    width: 50%;
      > div {
        display: flex;
        flex-direction: column;
@@ -109,22 +103,14 @@ export const HeaderDiv = styled.div`
        padding-right: 109px;
        width: 100%;
       > h1 {
-        font-size: ${({ theme }) => theme.font.size.lg};
-        font-family: ${({ theme }) => theme.font.family.poppins};
-        font-weight: 600;
-        color: ${({ theme }) => theme.color.white};
         line-height: 62px;
-        width: 59%;
         margin-bottom: 32px;
+        width: 59%;
        }
       > p {
-        font-size: ${({ theme }) => theme.font.size.m};
-        font-family: ${({ theme }) => theme.font.family.inter};
-        font-weight: 400;
-        color: ${({ theme }) => theme.color.white};
         line-height: 30px;
-        width: 85%;
         margin-bottom: 42px;
+        width: 85%;
       }
     }
   }
@@ -153,7 +139,6 @@ export const ImgDiv = styled.div`
     min-width: 223px;
     justify-content: center;
     width: 100vw;
-    z-index: !important;
     padding: 1rem;
     margin: 0 auto;
       > h1 {
@@ -247,7 +232,7 @@ export const ImgDiv = styled.div`
     }
   }
   ${({ theme }) => theme.mq.desktop} {
-    object-fit: cover;
+    object-fit: contain;
     width: 50%;
     height: 800px ;
 
@@ -256,8 +241,22 @@ export const ImgDiv = styled.div`
     }
     > .big {
       display: inline-block;
+      height: 100%;
       width: 100%;
       object-fit: cover;
+     }
+  }
+  ${({ theme }) => theme.mq.bigDesktop} {
+    object-fit: contain;
+    width: 50%;
+    max-height: 800px ;
+    > .big {
+      display: inline-block;
+      width: 100%;
+      height: 800px
+      object-fit: contain;
+
+
      }
   }
 `;

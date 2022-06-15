@@ -9,17 +9,16 @@ export const ArticleWithButtonWrapper = styled.div<PropsGlobalStyle>`
     display: flex;
     flex-direction: ${(props) => props.side === "left" ? `row-reverse` : `row`};
     justify-content: space-between;
-    margin: 5rem auto;
+    margin: 20px auto;
     max-width: 960px;
     width: 90vw;
   }
   ${({ theme }) => theme.mq.desktop} {
-    margin: 4rem auto;
+    margin: 20px auto;
     max-width: 1360px;
     width: 90%;
-  }
+   }
   ${({ theme }) => theme.mq.bigDesktop} {
-    margin: 0 auto;
     width: 1360px;
    }
 `;
@@ -31,23 +30,27 @@ export const TextDiv = styled.div<PropsGlobalStyle>`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 1rem 1.5rem;
     padding-right: 5rem;
     width: 50vw;
+    max-width: 548px;
+    padding-right: ${(props) => props.side === "left" ? `5rem` : `0`};
+    padding-left: ${(props) => props.side === "left" ? `0` : `0`};
    }
   ${({ theme }) => theme.mq.desktop} {
     align-items: ${(props) => props.side === "left" ? `flex-end` : `flex-start`};
     display: flex;
     flex-direction: column;
-    height: 50%;
+    height: 548px;
     justify-content: center;
     padding-right: ${(props) => props.side === "left" ? `5rem` : `0`};
-    padding-left: ${(props) => props.side === "left" ? `0` : `5rem`};
+    padding-left: ${(props) => props.side === "left" ? `1rem ` : `0`};
     width: 50%;
   }
   ${({ theme }) => theme.mq.bigDesktop} {
     height: 548px;
     padding-right: 200px
+    padding-right: ${(props) => props.side === "left" ? `5rem` : `0`};
+    padding-left: ${(props) => props.side === "left" ? `0` : `0`};
     width: 548px;
   }
 `;
@@ -57,9 +60,9 @@ display: none;
 ${({ theme }) => theme.mq.tablet} {
   border-radius: 8px;
   display: inline-block;
-  height: 330px;
+  height: 100%;
   object-fit: cover;
-  width: 330px;
+  max-width: 548px;
   > img {
     border-radius: 8px;
     height: 330px;
@@ -68,14 +71,17 @@ ${({ theme }) => theme.mq.tablet} {
 }
 ${({ theme }) => theme.mq.desktop} {
   border-radius: 8px;
-  height: 380px;
+  height: 548px;
   object-fit: cover;
-  width: 380px;
+  width: 548px;
   > img {
     border-radius: 8px;
-    height: 100%;
-    width: 100%;
+    height: 548px;
+    width: 548px;
   }
+}
+
+
 }
 ${({ theme }) => theme.mq.bigDesktop} {
   border-radius: 8px;

@@ -49,13 +49,10 @@ export const ArticleWrapper = styled.section`
   ${({ theme }) => theme.mq.phone} {
     width: 90vw;
   }
-  ${({ theme }) => theme.mq.desktop} {
-    align-items: space-around;
-    flex-direction: row;
-    justify-content: space-around;
-    max-width: 1360px;
-  }
   ${({ theme }) => theme.mq.bigDesktop} {
+    align-items: space-between;
+    flex-direction: row;
+    justify-content: space-between;
     width: 1360px;
    }
 `;

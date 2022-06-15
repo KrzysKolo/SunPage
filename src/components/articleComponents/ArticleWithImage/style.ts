@@ -6,7 +6,7 @@ export const ArticleWithImageWrapper = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 20px 10px;
+  margin: 20px 0;
   :nth-child(odd) {
     background: ${({ theme }) => theme.color.primary50};
   }
@@ -29,10 +29,10 @@ export const TextDiv = styled.div`
     height: 180px;
     width: 432px;
    }
-  ${({ theme }) => theme.mq.tablet} {
+/*   ${({ theme }) => theme.mq.tablet} {
     height: 180px;
     width: 300px;
-   }
+   } */
   ${({ theme }) => theme.mq.bigDesktop} {
     height: 180px;
     width: 432px;
@@ -59,14 +59,7 @@ export const ImageDiv = styled.div<PropsGlobalStyle>`
    height: 300px;
    width: 432px;
    }
-  ${({ theme }) => theme.mq.desktop} {
-    height: 300px;
-    width: 300px;
-   }
-  ${({ theme }) => theme.mq.bigDesktop} {
-    height: 300px;
-    width: 432px;
-   }
+
 `;
 
 export const DateDiv = styled.div`

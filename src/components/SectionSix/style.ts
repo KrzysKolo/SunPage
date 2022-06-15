@@ -48,7 +48,6 @@ export const ImageDiv = styled.div`
     width: 50%;
     height: 686px;
     min-width: 450px;
-    object-fit: container;
     display: inline-block;
     border-radius: 8px;
 

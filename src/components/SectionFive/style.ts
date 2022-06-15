@@ -12,11 +12,12 @@ export const SectionFiveWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  padding: 80px;
+  padding: 80px 40px;
   width: 90vw;
   ${({ theme }) => theme.mq.desktop} {
     margin: 0 auto;
     max-width: 1360px;
+    padding: 80px;
   };
   ${({ theme }) => theme.mq.bigDesktop} {
     margin: 0 auto;
@@ -34,10 +35,13 @@ export const TextH3 = styled.h3`
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
-  width: 90vw;
+  width: 80vw;
   ${({ theme }) => theme.mq.tablet} {
-    width: 30vw;
-    min-367px;
+    width: 80vw;
+    min-width: 367px;
+  };
+  ${({ theme }) => theme.mq.desktop} {
+    min-width: 367px;
   };
 `;
 

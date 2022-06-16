@@ -2,6 +2,7 @@ const PaletColors = {
   "primary-800": "#3F69BF",
   "primary-700": "#5086F2",
   "primary-600": "#6E9EFF",
+  "primary-200": "#D2E1FF",
   "primary-100": "#E5EEFF",
   "primary-50": "#F7F9FF",
   "grey-900": "#242529",

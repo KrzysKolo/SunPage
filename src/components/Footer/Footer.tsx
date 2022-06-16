@@ -1,13 +1,16 @@
 import React from 'react';
-import { FooterInfo } from '../footerComponents';
-import  FooterMenu from '../footerComponents/FooterMenu/FooterMenu';
+import {Container, FooterWrapper } from './style'
+import { FooterInfo, FooterMenu } from '../footerComponents';
+
 
 const Footer = () => {
   return (
-    <>
-      <FooterMenu />
-      <FooterInfo />
-    </>
+    <Container>
+      <FooterWrapper>
+        <FooterMenu />
+        <FooterInfo />
+      </FooterWrapper>
+    </Container>
   )
 }
 

@@ -5,7 +5,7 @@ export const Container = styled.footer`
   display: flex;
   justify-content: center;
   padding: 31px 0;
-`;
+ `;
 
 export const FooterWrapper = styled.div`
   align-items: center;
@@ -17,10 +17,11 @@ export const FooterWrapper = styled.div`
   width: 90vw;
   ${({ theme }) => theme.mq.desktop} {
     max-width: 1360px;
+    width: 100%;
   };
   ${({ theme }) => theme.mq.bigDesktop} {
-
     width: 1360px;
+    margin: 0 auto;
   };
 `;
 

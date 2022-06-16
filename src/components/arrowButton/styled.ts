@@ -9,7 +9,14 @@ export const ArrowButtonWrapper = styled.div`
   margin-bottom: 75px;
   transition: all .3s easy-in-out;
   width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   :hover {
-    box-shadow: 1px 1px 6px ${({ theme }) => theme.color.grey500};;
+    background: ${({ theme }) => theme.color.primary100};
+  }
+  :active {
+    background: ${({ theme }) => theme.color.primary200};
   }
 `;

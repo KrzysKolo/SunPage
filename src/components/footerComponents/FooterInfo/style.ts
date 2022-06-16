@@ -17,6 +17,7 @@ export const FooterInfoDiv = styled.div`
   width: 90vw;
   ${({ theme }) => theme.mq.desktop} {
     max-width: 1360px;
+    width: 100%;
   };
   ${({ theme }) => theme.mq.bigDesktop} {
     width: 1360px;
@@ -45,9 +46,20 @@ export const SMMenuUl = styled.ul`
         width: 40px;
         height: 40px;
         border-radius: 50%;
+        background: ${({ theme }) => theme.color.white};
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        :hover {
+          background: ${({ theme }) => theme.color.primary100};
+        }
+        :active {
+          background: ${({ theme }) => theme.color.primary200};
+        }
         > img {
-          width: 100%;
-          height: 100%;
+          width: 20px;
+          height: 20px;
           border-radius: 50%;
         }
       }

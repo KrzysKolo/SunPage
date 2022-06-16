@@ -8,6 +8,7 @@ export const theme = {
     primary800: `${PaletColors["primary-800"]}`,
     primary700: `${PaletColors["primary-700"]}`,
     primary600: `${PaletColors["primary-600"]}`,
+    primary200: `${PaletColors["primary-200"]}`,
     primary100: `${PaletColors["primary-100"]}`,
     primary50: `${PaletColors["primary-50"]}`,
     grey900: `${PaletColors["grey-900"]}`,

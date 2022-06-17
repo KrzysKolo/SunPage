@@ -8,6 +8,16 @@ export const InputWrapper = styled.input`
   border: 1px solid ${({ theme }) => theme.color.grey100};
   outline: none;
   margin: 5px 8px;
+  :hover{
+    border: 1px solid ${({ theme }) => theme.color.grey300};
+  }
+  :focus {
+    border: 1px solid ${({ theme }) => theme.color.primary500};
+  }
+  :user-error{
+    border: 1px solid ${({ theme }) => theme.color.white};
+  }
+
   ::placeholder {
     color: ${({ theme }) => theme.color.grey700};
     font-family: ${({ theme }) => theme.font.family.inter};
@@ -35,3 +45,5 @@ export const InputWrapper = styled.input`
   ${({ theme }) => theme.mq.bigDesktop} {
    width: 274px;
   }`;
+
+export const TextPlaceholder = styled.div``;

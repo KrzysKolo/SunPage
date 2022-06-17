@@ -16,7 +16,7 @@ const CheckBox: React.FC<CheckBoxProps> = ({ checked, ...props}) => {
           <polyline points="20 6 9 17 4 12" />
         </Icon>
         </Input>
-  </CheckWrapper>
+    </CheckWrapper>
   )
 }
 

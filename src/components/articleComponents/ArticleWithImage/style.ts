@@ -29,10 +29,6 @@ export const TextDiv = styled.div`
     height: 180px;
     width: 432px;
    }
-/*   ${({ theme }) => theme.mq.tablet} {
-    height: 180px;
-    width: 300px;
-   } */
   ${({ theme }) => theme.mq.bigDesktop} {
     height: 180px;
     width: 432px;
@@ -56,10 +52,9 @@ export const ImageDiv = styled.div<PropsGlobalStyle>`
   padding: 0
   width: 300px;
  ${({ theme }) => theme.mq.phone} {
-   height: 300px;
+   height: 320px;
    width: 432px;
    }
-
 `;
 
 export const DateDiv = styled.div`

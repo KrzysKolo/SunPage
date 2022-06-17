@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import PaletColors from '../../assets/colors/PaletColors';
-import { PropsGlobalStyle } from '../../assets/styles/GlobalStyles';
+
 
 export const FormWrapper = styled.section`
   background: ${({ theme }) => theme.color.primary50};
@@ -11,13 +10,13 @@ export const FormWrapper = styled.section`
   align-items: flex-end;
    width: 90vw;
    margin: 0 auto;
+   overflow: hidden;
   ${({ theme }) => theme.mq.desktop} {
     padding: 48px;
    height: 686px;
    max-width: 400;
    width: 100%;
   };
-
   ${({ theme }) => theme.mq.bigDesktop} {
    padding: 48px;
    width: 664px;
@@ -91,6 +90,10 @@ export const CheckDiv = styled.div`
   justify-content: flex-start;
   width: 100%;
   padding: 20px 8px;
+  > div {
+    height: 36px;
+    width: 36px;
+  }
   > p {
     padding-top: 5px;
     margin-left: 12px;

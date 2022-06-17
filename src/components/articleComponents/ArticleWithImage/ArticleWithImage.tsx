@@ -16,7 +16,9 @@ const ArticleWithImage:React.FC<ArticleWithImageProps> = ({ image, title, titleC
 
   return (
     <ArticleWithImageWrapper>
-      <ImageDiv image={image} />
+      <ImageDiv>
+        <img src={image} alt='Foto' />
+      </ImageDiv>
       <TextDiv>
         <TitleCategory text={titleCategory} />
         <SmallTitleArticle title={title} />

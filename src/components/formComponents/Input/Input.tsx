@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputWrapper } from './style';
+import { InputWrapper, TextPlaceholder } from './style';
 
 export type InputProps = {
   placeholder: string;
@@ -8,7 +8,9 @@ export type InputProps = {
 
 const Input:React.FC<InputProps> = ({ placeholder, type}) => {
   return (
-    <InputWrapper type={type} placeholder={placeholder} />
+    <>
+     <InputWrapper type={type} placeholder={placeholder} />
+    </>
   )
 }
 

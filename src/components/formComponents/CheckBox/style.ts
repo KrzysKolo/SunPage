@@ -2,65 +2,60 @@ import styled from 'styled-components';
 import PaletColors from '../../../assets/colors/PaletColors';
 import { PropsGlobalStyle } from '../../../assets/styles/GlobalStyles';
 
-
 export const CheckWrapper = styled.div`
-  position: relative;
-  width: 36px;
-  height: 36px;
-  display: inline-block;
-  vertical-align: middle;
+  align-items: center;
+  cursor: pointer;
   border-radius: 50%;
-  border: ${({ theme }) => theme.color.grey500};;
   display: flex;
   flex-direction: column;
+  height: 36px;
   justify-content: center;
-  align-items: center;
   transition: all .3s easy;
-  cursor: pointer;
+  width: 36px;
+  position: relative;
   :hover {
-    background: ${({ theme }) => theme.color.primary100};;
+    background: ${({ theme }) => theme.color.primary100};
   }
   :active {
-    background: ${({ theme }) => theme.color.primary700};;
+    background: ${({ theme }) => theme.color.primary700};
+    height: 36px;
+    width: 36px;
   }
-
 `;
 
 export const Icon = styled.svg`
-fill: none;
-stroke: white;
-stroke-width: 2px;
-`
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+`;
+
 export const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
-position: absolute;
-width: 20px;
-height: 20px;
-opacity: 0;
-cursor: pointer;
-
-`
-
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+  opacity: 0;
+  width: 20px;
+`;
 
 export const Input = styled.div<PropsGlobalStyle>`
-  display: inline-block;
-  width: 20px;
-  height: 20px;
   background: ${(props) => props.checked ? `${PaletColors["primary-600"]}` : 'transparent'};
-  transition: all 150ms;
   border: 1px solid ${(props) => props.checked ? `${PaletColors["primary-600"]}` : `${PaletColors["grey-500"]}`};
   cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  transition: all 150ms;
+  width: 20px;
   :hover  {
     border: 1px solid ${(props) => props.checked ? `${PaletColors["primary-600"]}` : 'red'};
   }
   :active {
     background: ${({ theme }) => theme.color.primary700};
-    };
-  }
+    }
+  };
 
   ${HiddenCheckbox}:focus + & {
     box-shadow: 0 0 0 1px ${({ theme }) => theme.color.grey500};
-
-  }
+  };
 
   ${Icon} {
     visibility: ${props => (props.checked ? 'visible' : 'hidden')}

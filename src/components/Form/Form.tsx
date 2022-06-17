@@ -27,7 +27,9 @@ const Form = () => {
         <TextArea placeholder='Twoja wiadomość' />
       </TextDiv>
       <CheckDiv>
-        <CheckBox onChange={handeleCheckBoxChange} checked={checked} />
+        <div>
+          <CheckBox onChange={handeleCheckBoxChange} checked={checked} />
+        </div>
         <p>Zapoznałem się z regulaminem i wyrażam zgodę na przetwarzanie moich danych osobowych przez Sungroup.pl</p>
       </CheckDiv>
       <ButtonDiv>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SectionOneWrapper = styled.div`
-  padding: 40px 0;
+  padding: 73px 0;
   background: ${({ theme }) => theme.color.beige};
   ${({ theme }) => theme.mq.tablet} {
     padding: 50px 0;

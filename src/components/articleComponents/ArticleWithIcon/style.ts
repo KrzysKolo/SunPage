@@ -28,7 +28,7 @@ export const ArticleWithIconWrapper = styled.article`
     padding: 0;
   }
   ${({ theme }) => theme.mq.bigDesktop} {
-    max-width: 495px;
+    width: 440px;
     margin: 0 10px;
     padding: 0;
   }
@@ -42,7 +42,7 @@ export const IconDiv = styled.div`
 export const TextDiv = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
+  margin-left: 24px;
   margin-top: 20px;
   ${({ theme }) => theme.mq.tablet} {
     margin-top: 10px;

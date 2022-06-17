@@ -10,6 +10,9 @@ background: ${({ theme }) => theme.color.white};
   margin: 0 8px;
   width: 100%;
   height: 100px;
+  :hover {
+    border: 1px solid ${({ theme }) => theme.color.grey300};
+  }
   ::placeholder {
     color: ${({ theme }) => theme.color.grey700};
     font-family: ${({ theme }) => theme.font.family.inter};

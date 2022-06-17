@@ -1,5 +1,4 @@
-import React, { DetailedHTMLProps, Dispatch, InputHTMLAttributes, SetStateAction } from 'react';
-import { createPropertySignature } from 'typescript';
+import React, { DetailedHTMLProps, InputHTMLAttributes  } from 'react';
 import { CheckWrapper, Input, HiddenCheckbox, Icon } from './style';
 
 export type CheckBoxProps = {

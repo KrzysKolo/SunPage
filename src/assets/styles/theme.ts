@@ -5,6 +5,7 @@ export const theme = {
   color: {
     beige: `${PaletColors["beige"]}`,
     green: `${PaletColors["green"]}`,
+    red: `${PaletColors["red"]}`,
     white: `${PaletColors["white"]}`,
     primary800: `${PaletColors["primary-800"]}`,
     primary700: `${PaletColors["primary-700"]}`,

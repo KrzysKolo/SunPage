@@ -12,7 +12,7 @@ export const FormWrapper = styled.section`
    margin: 0 auto;
    overflow: hidden;
   ${({ theme }) => theme.mq.desktop} {
-    padding: 48px;
+   padding: 48px;
    height: 686px;
    max-width: 400;
    width: 100%;
@@ -57,12 +57,14 @@ export const NameDiv = styled.div`
   justify-content: space-between;
   align-items: space-between;
   width: 100%;
+  margin: 0 auto;
+  padding-right: 25px;
   ${({ theme }) => theme.mq.desktop} {
     width: 100%;
     display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: space-between
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between
   };
 `;
 
@@ -75,8 +77,10 @@ display: flex;
 align-items: center;
 justify-content: center;
 width: 100%;
+padding: 0 5px;
+margin: 0 auto;
   ${({ theme }) => theme.mq.desktop} {
-   max-width: 568px;
+   max-width: 580px;
    width: 100%;
    height: 200px;
    margin: 0 auto;

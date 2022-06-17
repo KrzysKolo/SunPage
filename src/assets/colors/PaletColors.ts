@@ -18,6 +18,7 @@ const PaletColors = {
   "white": "#FFFFFF",
   "beige": "#f9f9fa",
   "green": "#329F32",
+  "red": "#C90D0D",
 };
 
 export default PaletColors;

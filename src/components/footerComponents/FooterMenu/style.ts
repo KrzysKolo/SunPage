@@ -20,8 +20,8 @@ export const FooterWrapper = styled.div`
     width: 100%;
   };
   ${({ theme }) => theme.mq.bigDesktop} {
-    width: 1360px;
     margin: 0 auto;
+    width: 1360px;
   };
 `;
 
@@ -44,8 +44,8 @@ export const ImageDiv = styled.div`
     text-decoration: none;
     > img {
       width: 100px;
-    }
-  }
+    };
+  };
 `;
 
 export const MenuUl = styled.ul`

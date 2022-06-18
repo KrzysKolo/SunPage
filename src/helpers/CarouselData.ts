@@ -10,7 +10,7 @@ export const carouselItems = [
     subtitle: "Firma Jana Kowalskiego",
     image: klient1,
   },
-  /* {
+  {
     id: "2",
     description: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.",
     title: "Tomasz Nowak",
@@ -23,5 +23,5 @@ export const carouselItems = [
     title: "Monika Zielińska",
     subtitle: "Firma Moniki Zielińskiej",
     image: klient3,
-  }, */
+  },
 ];

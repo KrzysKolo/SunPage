@@ -33,34 +33,34 @@ export const SectionSixWrapper = styled.div`
     width: 1360px;
   };
 `;
+
 export const FormDiv = styled.div`
    ${({ theme }) => theme.mq.desktop} {
-    width: 50%;
-    height: 687px;
-    min-width: 400px;
-    border-radius: 8px;
-   }
+     border-radius: 8px;
+     height: 687px;
+     min-width: 400px;
+     width: 50%;
+   };
 `;
 
 export const ImageDiv = styled.div`
   display: none;
   ${({ theme }) => theme.mq.desktop} {
-    width: 50%;
+    border-radius: 8px;
+    display: inline-block;
     height: 686px;
     min-width: 450px;
-    display: inline-block;
-    border-radius: 8px;
-
+    width: 50%;
     > img {
       border-radius: 8px;
       height: 100%;
-      width: 100%;
       object-fit: cover;
-   }
+      width: 100%;
+   };
   ${({ theme }) => theme.mq.bigDesktop} {
     height: 686px;
     width: 664px;
-   }
+   };
 `;
 
 

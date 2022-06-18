@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const ArticleWithIconWrapper = styled.article`
-  display: flex;
   align-items: center;
+  display: flex;
   flex-direction: column;
   padding: 0 5px;
   :nth-child(odd) {
@@ -14,11 +14,11 @@ export const ArticleWithIconWrapper = styled.article`
     align-items: center;
     flex-direction: column;
     :nth-child(odd) {
-    background: transparent;
-    margin: 0;
-    padding: 0;
-    }
-  }
+      background: transparent;
+      margin: 0;
+      padding: 0;
+    };
+  };
   ${({ theme }) => theme.mq.desktop} {
     align-items: flex-start;
     flex-direction: row;
@@ -26,12 +26,12 @@ export const ArticleWithIconWrapper = styled.article`
     max-width: 495px;
     margin: 0 10px;
     padding: 0;
-  }
+  };
   ${({ theme }) => theme.mq.bigDesktop} {
     width: 440px;
     margin: 0 10px;
     padding: 0;
-  }
+  };
 `;
 
 export const IconDiv = styled.div`
@@ -46,10 +46,10 @@ export const TextDiv = styled.div`
   margin-top: 20px;
   ${({ theme }) => theme.mq.tablet} {
     margin-top: 10px;
-  }
+  };
   ${({ theme }) => theme.mq.desktop} {
     margin-top: 20px;
-  }
+  };
 `;
 
 export const TextP = styled.p`

@@ -7,9 +7,8 @@ export const Container = styled.footer`
   margin: 0 auto;
   ${({ theme }) => theme.mq.bigDesktop} {
     width: 1920px;
-  }
+  };
 `;
-
 
 export const FooterWrapper = styled.div`
   margin: 0 auto;

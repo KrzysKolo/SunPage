@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import { Link } from 'react-router-dom';
 import { WrapperBtn } from './style';
 
@@ -6,11 +6,15 @@ export type ButtonProps = {
   btnText: string;
   outLine?: string;
   btnLink: string;
+  onClick?: MouseEventHandler<HTMLDivElement>;
 };
-const Button: React.FC<ButtonProps> = ({ btnText, outLine, btnLink }) => {
+const Button: React.FC<ButtonProps> = ({ btnText, outLine, btnLink, onClick }) => {
   return (
-    <WrapperBtn outLine={outLine}>
-      <Link className="button" to={btnLink}><span>{btnText}</span></Link>
+    <WrapperBtn outLine={outLine} >
+      { btnLink !== ""
+        ? (<Link className="button" to={btnLink}><span>{btnText}</span></Link>)
+        : (<div className="button" onClick={onClick}>{btnText}</div>)
+      }
     </WrapperBtn>
   )
 }

@@ -12,3 +12,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+  width: 94%;
+}

@@ -29,17 +29,18 @@ export const HeaderDiv = styled.div`
     font-size: 32px;
     font-weight: 600;
     line-height: 48px;
-    }
+    };
   ${({ theme }) => theme.mq.phone} {
     width: 90vw;
-    }
+    };
   ${({ theme }) => theme.mq.desktop} {
     max-width: 1360px;
-    }
+    };
   ${({ theme }) => theme.mq.bigDesktop} {
     width: 1360px;
-   }
+   };
 `;
+
 export const ArticleWrapper = styled.section`
   align-items: center;
   display: flex;
@@ -48,11 +49,11 @@ export const ArticleWrapper = styled.section`
   width: 96%;
   ${({ theme }) => theme.mq.phone} {
     width: 90vw;
-  }
+  };
   ${({ theme }) => theme.mq.bigDesktop} {
     align-items: space-between;
     flex-direction: row;
     justify-content: space-between;
     width: 1360px;
-   }
+   };
 `;

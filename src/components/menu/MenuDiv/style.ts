@@ -20,10 +20,10 @@ export const MenuDivWrapper = styled.div`
         text-decoration: none;
         :hover {
           color: ${({ theme }) => theme.color.primary700};
-        }
-      }
-    }
-  }
+        };
+      };
+    };
+  };
   ${({ theme }) => theme.mq.desktop} {
     align-items: center;
     display: flex;

@@ -4,28 +4,28 @@ import { PropsGlobalStyle } from '../../../assets/styles/GlobalStyles';
 
 export const CheckWrapper = styled.div`
   align-items: center;
-  cursor: pointer;
   border-radius: 50%;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   height: 36px;
   justify-content: center;
+  position: relative;
   transition: all .3s easy;
   width: 36px;
-  position: relative;
-  :hover {
+  &:hover {
     background: ${({ theme }) => theme.color.primary100};
-  }
-  :active {
+  };
+  &:active {
     background: ${({ theme }) => theme.color.primary700};
     height: 36px;
     width: 36px;
-  }
+  };
 `;
 
 export const Icon = styled.svg`
   fill: none;
-  stroke: white;
+  stroke: ${({ theme }) => theme.color.white};
   stroke-width: 2px;
 `;
 
@@ -45,19 +45,17 @@ export const Input = styled.div<PropsGlobalStyle>`
   height: 20px;
   transition: all 150ms;
   width: 20px;
-  :hover  {
+  &:hover  {
     border: 1px solid ${(props) => props.checked ? `${PaletColors["primary-600"]}` : 'red'};
-  }
-  :active {
-    background: ${({ theme }) => theme.color.primary700};
-    }
   };
-
+  &:active {
+    background: ${({ theme }) => theme.color.primary700};
+    };
+  };
   ${HiddenCheckbox}:focus + & {
     box-shadow: 0 0 0 1px ${({ theme }) => theme.color.grey500};
   };
-
   ${Icon} {
     visibility: ${props => (props.checked ? 'visible' : 'hidden')}
-    }
+    };
 ` ;

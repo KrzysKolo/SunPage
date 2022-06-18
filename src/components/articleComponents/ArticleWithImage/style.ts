@@ -9,12 +9,12 @@ export const ArticleWithImageWrapper = styled.article`
   margin: 20px 0;
   :nth-child(odd) {
     background: ${({ theme }) => theme.color.primary50};
-  }
+  };
   ${({ theme }) => theme.mq.desktop} {
     :nth-child(odd) {
     background: transparent;
-    }
-  }
+    };
+  };
 `;
 
 export const TextDiv = styled.div`
@@ -28,11 +28,11 @@ export const TextDiv = styled.div`
   ${({ theme }) => theme.mq.phone} {
     height: 180px;
     width: 432px;
-   }
+   };
   ${({ theme }) => theme.mq.bigDesktop} {
     height: 180px;
     width: 432px;
-   }
+   };
 `;
 
 export const Text = styled.p`
@@ -54,12 +54,12 @@ export const ImageDiv = styled.div<PropsGlobalStyle>`
  ${({ theme }) => theme.mq.phone} {
    height: 320px;
    width: 432px;
-   }
+   };
 `;
 
 export const DateDiv = styled.div`
-  display: flex;
   align-items: center;
+  display: flex;
 `;
 
 export const IconDiv = styled.div`

@@ -10,6 +10,6 @@ export const TextDivWrapper = styled.div`
   text-align: center;
   ${({ theme }) => theme.mq.tablet} {
     max-width: 50vw;
-  }
+  };
 `;
 

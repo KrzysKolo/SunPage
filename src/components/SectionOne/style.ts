@@ -40,16 +40,16 @@ export const ArticleWrapper = styled.section`
   justify-content: space-between;
   ${({ theme }) => theme.mq.tablet} {
     flex-direction: row;
-  }
+  };
   ${({ theme }) => theme.mq.desktop} {
     flex-direction: row;
     margin: 0 5rem;
-  }
+  };
   ${({ theme }) => theme.mq.bigDesktop} {
     flex-direction: row;
     justify-content: space-around;
     margin: 0 auto;
-  }
+  };
 `;
 
 export const TitleWrapper = styled.div`

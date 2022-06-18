@@ -4,7 +4,7 @@ import { PropsGlobalStyle } from '../../../assets/styles/GlobalStyles';
 
 export const MenuDivSmallWrapper = styled(MenuDivWrapper)<PropsGlobalStyle>`
   align-items: center;
-  background: white;
+  background: ${({ theme }) => theme.color.white};
   display: flex;
   flex-direction: column;
   height: 90vh;
@@ -27,18 +27,18 @@ export const MenuDivSmallWrapper = styled(MenuDivWrapper)<PropsGlobalStyle>`
       :hover {
          color: ${({ theme }) => theme.color.primary700};
          border-bottom: 2px solid ${({ theme }) => theme.color.primary700};
-        }
+        };
       :nth-child(odd){
         background: ${({ theme }) => theme.color.primary50};
-      }
+      };
      > .navlink {
         color: ${({ theme }) => theme.color.grey700};
         font-size: ${({ theme }) => theme.font.size.xs};
         transition: all .3s easy-in-out;
         text-decoration: none;
-      }
-    }
-  }
+      };
+    };
+  };
   ${({ theme }) => theme.mq.desktop} {
     display: none;
   };

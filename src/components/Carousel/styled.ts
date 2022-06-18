@@ -4,8 +4,10 @@ export const CarouselWrapper = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   overflow: hidden;
   padding: 0 20px;
+  width: 90%;
 `;
 
 export const ImageDiv = styled.div`
@@ -18,7 +20,7 @@ export const ImageDiv = styled.div`
     border-radius: 50%;
     height: 100%;
     width: 100%;
-  }
+  };
 `;
 
 export const TextH3 = styled.h3`

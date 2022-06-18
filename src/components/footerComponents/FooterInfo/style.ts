@@ -43,35 +43,35 @@ export const SMMenuUl = styled.ul`
     margin-right: 20px;
     > .navlink {
       > div {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
+        align-items: center;
         background: ${({ theme }) => theme.color.white};
+        border-radius: 50%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        height: 40px;
         justify-content: center;
-        :hover {
+        width: 40px;
+        &:hover {
           background: ${({ theme }) => theme.color.primary100};
-        }
-        :active {
+        };
+        &:active {
           background: ${({ theme }) => theme.color.primary200};
-        }
+        };
         > img {
-          width: 20px;
-          height: 20px;
           border-radius: 50%;
-        }
-      }
-      :hover {
+          height: 20px;
+          width: 20px;
+        };
+      };
+      &:hover {
           color: ${({ theme }) => theme.color.primary700};
-      }
-    }
-   }
+      };
+    };
+   };
    ${({ theme }) => theme.mq.tablet} {
     display: flex;
     flex-direction: row;
-    }
+    };
 `;
 
 

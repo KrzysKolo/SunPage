@@ -2,41 +2,42 @@ import styled from 'styled-components';
 
 
 export const FormWrapper = styled.section`
+  align-items: flex-end;
   background: ${({ theme }) => theme.color.primary50};
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  border-radius: 8px;
   justify-content: space-between;
-  align-items: flex-end;
-   width: 90vw;
-   margin: 0 auto;
-   overflow: hidden;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 90vw;
   ${({ theme }) => theme.mq.desktop} {
-   padding: 48px;
-   height: 686px;
-   max-width: 400;
-   width: 100%;
+    height: 686px;
+    max-width: 400;
+    padding: 48px;
+    width: 100%;
   };
   ${({ theme }) => theme.mq.bigDesktop} {
-   padding: 48px;
-   width: 664px;
-   height: 686px;
-  }`;
+    height: 686px;
+    padding: 48px;
+    width: 664px;
+  };
+`;
 
 export const HeaderForm = styled.div`
-  width: 90vw;
   min-width: 220px;
+  width: 90vw;
   > h3 {
     color: ${({ theme }) => theme.color.grey900};
     font-family: ${({ theme }) => theme.font.family.poppins};
     font-size: 28px;
     font-weight: 600;
     line-height: 42px;
-    text-align: left;
-    width: 90vw;
     margin: 0 auto;
     padding: 20px 15px;
-   }
+    text-align: left;
+    width: 90vw;
+   };
    ${({ theme }) => theme.mq.desktop} {
    width: 100%;
    > h3 {
@@ -46,79 +47,77 @@ export const HeaderForm = styled.div`
     font-weight: 600;
     line-height: 42px;
     text-align: left;
-   }
+   };
   };
-
 `;
 
 export const NameDiv = styled.div`
+  align-items: space-between;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: space-between;
-  width: 100%;
   margin: 0 auto;
   padding-right: 25px;
+  width: 100%;
   ${({ theme }) => theme.mq.desktop} {
-    width: 100%;
+    align-items: space-between
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: space-between
+    width: 100%;
   };
 `;
 
 export const AddressDiv = styled(NameDiv)`
-
 `;
 
 export const TextDiv = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-width: 100%;
-padding: 0 5px;
-margin: 0 auto;
-  ${({ theme }) => theme.mq.desktop} {
-   max-width: 580px;
-   width: 100%;
-   height: 200px;
-   margin: 0 auto;
-  };
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 5px;
+  width: 100%;
+    ${({ theme }) => theme.mq.desktop} {
+      height: 200px;
+      margin: 0 auto;
+      max-width: 580px;
+      width: 100%;
+    };
 `;
 
 export const CheckDiv = styled.div`
+  align-items: flex-start;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   justify-content: flex-start;
-  width: 100%;
   padding: 20px 8px;
+  width: 100%;
   > div {
     height: 36px;
     width: 36px;
-  }
+  };
   > p {
-    padding-top: 5px;
-    margin-left: 12px;
     color: ${({ theme }) => theme.color.grey900};
     font-family: ${({ theme }) => theme.font.family.inter};
-    font-size: ${({ theme }) => theme.font.size.xs};
     font-weight: 400;
+    font-size: ${({ theme }) => theme.font.size.xs};
     line-height: 20px;
-     }
+    margin-left: 12px;
+    padding-top: 5px;
+    };
   ${({ theme }) => theme.mq.desktop} {
     margin: 20px 0;
   > p {
-    margin-left: 12px;
     line-height: 26px;
+    margin-left: 12px;
     }
   }
 `;
 
 export const ButtonDiv = styled.div`
-position: relative;
-bottom: 15px;
-padding: 30px 0;
-margin-right: 8px;
+  bottom: 15px;
+  margin-right: 8px;
+  padding: 30px 0;
+  position: relative;
 `;

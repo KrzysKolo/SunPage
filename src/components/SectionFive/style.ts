@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-background: ${({ theme }) => theme.color.beige};
-padding-bottom: 128px;
+  background: ${({ theme }) => theme.color.beige};
+  padding-bottom: 128px;
 `;
 
 export const SectionFiveWrapper = styled.div`

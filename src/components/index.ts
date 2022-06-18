@@ -2,6 +2,7 @@ export { default as ArticleWithButton } from './articleComponents/ArticleWithBut
 export { default as ArticleWithIcon } from './articleComponents/ArticleWithIcon';
 export { default as Button } from './Button';
 export { default as CheckBox } from './formComponents/CheckBox';
+export { default as ErrorMessage } from './formComponents/ErrorMessage';
 export { default as Footer } from './Footer';
 export { default as FooterInfo } from './footerComponents/FooterInfo';
 export { default as FooterMenu } from './footerComponents/FooterMenu';

@@ -8,7 +8,7 @@ export const Section = styled.section`
 
 export const SectionThreeWrapper = styled.article`
   align-items: center;
-  border-top: 1px solid${({ theme }) => theme.color.grey200};
+  border-top: 1px solid ${({ theme }) => theme.color.grey200};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,3 +45,12 @@ export const ArrowTextDiv = styled.div`
   justify-content: space-between;
   width: 100%;
 `;
+export const CarouselDiv = styled.div`
+  width: 100%;
+`;
+
+export const ArrowDiv = styled.div`
+  height: 40px;
+  width: 40px;
+`;
+

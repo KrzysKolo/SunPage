@@ -15,11 +15,11 @@ export const WrapperBtn = styled.div<PropsGlobalStyle>`
     position: relative;
     transition: all 0.3s easy-in-out;
     text-decoration: none;
-    :hover {
+    &:hover {
       background-color: ${(props) => props.outLine ? `${PaletColors["primary-50"]}` : `${PaletColors["primary-700"]}`};
-    }
-    :active {
+    };
+    &:active {
       background-color: ${(props) => props.outLine ? `${PaletColors["primary-50"]}` : `${PaletColors["primary-800"]}`};
-    }
+    };
   };
   `;

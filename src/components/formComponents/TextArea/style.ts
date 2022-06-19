@@ -12,6 +12,7 @@ export const TextAreaWrapper = styled.div`
   width: 99%;
   ${({ theme }) => theme.mq.desktop} {
     height: 200px;
+    padding-right: 0;
     max-width: 600px;
   };
   ${({ theme }) => theme.mq.desktop} {
@@ -75,8 +76,9 @@ export const TextAreaBox = styled.textarea`
     background: ${({ theme }) => theme.color.white};
     border-radius: 2px;
     height: 200px;
-    outline: none;
+    margin: 0;
     padding: 16px 20px;
+    outline: none;
   ::placeholder {
     color: ${({ theme }) => theme.color.grey700};
     font-family: ${({ theme }) => theme.font.family.inter};

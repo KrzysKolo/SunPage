@@ -7,15 +7,17 @@ export type TextAreaProps = {
   onChange: React.MouseEventHandler<HTMLElement> | any;
   placeholder: string;
   value: string;
-  error: string;
+  error: string | any;
+  message: string | any;
+  touched: string | any;
 };
 
-const TextArea:React.FC<TextAreaProps> = ({ placeholder, value, id, onChange, error }) => {
+const TextArea:React.FC<TextAreaProps> = ({ placeholder, value, id, onChange, error, message, touched }) => {
   return (
     <TextAreaWrapper>
       <TextAreaBox placeholder={placeholder} value={value} id={id} onChange={onChange} />
       {value !== "" ? <Label htmlFor={id}>{placeholder}</Label> : ""}
-      { error !== "" && <ErrorMessage error={error} /> }
+      { error && touched &&  <ErrorMessage message={message} /> }
     </TextAreaWrapper>
   )
 }

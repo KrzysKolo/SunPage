@@ -6,7 +6,7 @@ export type ButtonProps = {
   btnText: string;
   outLine?: string;
   btnLink: string;
-  onClick?: MouseEventHandler<HTMLDivElement>;
+  onClick?: MouseEventHandler<HTMLDivElement> | any;
 };
 const Button: React.FC<ButtonProps> = ({ btnText, outLine, btnLink, onClick }) => {
   return (

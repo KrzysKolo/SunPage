@@ -62,7 +62,7 @@ export const Inputs = styled.input<PropsGlobalStyle>`
   };
   &:invalid {
     border: 1px solid ${({ theme }) => theme.color.red};
-  }
+  };
   ::placeholder {
     color: ${({ theme }) => theme.color.grey700};
     font-family: ${({ theme }) => theme.font.family.inter};
@@ -71,13 +71,14 @@ export const Inputs = styled.input<PropsGlobalStyle>`
     line-height: 28px;
   };
   ${({ theme }) => theme.mq.desktop} {
-    padding: 16px 20px 10px 20px;
+    margin: 5px 0;
+    max-width: 274px;
     outline: none;
-    max-width: 300px;
+    padding: 16px 20px 10px 20px;
     width: 100%;
   };
   ${({ theme }) => theme.mq.bigDesktop} {
-   width: 300px;
-  }
+   width: 274px;
+  };
   `;
 

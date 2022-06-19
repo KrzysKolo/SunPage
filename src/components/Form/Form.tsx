@@ -1,35 +1,53 @@
 import React, { useState } from 'react';
 import Button from '../Button';
-import { CheckBox, Input, TextArea } from '../formComponents';
+import { CheckBox, Input, SuccessMessage, TextArea } from '../formComponents';
 import { FormWrapper, NameDiv, AddressDiv, TextDiv, CheckDiv, HeaderForm, ButtonDiv } from './style'
+import {  FormikValues, useFormik } from "formik";
+import * as yup from "yup";
 
 const Form = () => {
-  const [checked, setCheckced] = useState<boolean>(false);
-  const [valueName, setValueName] = useState<string>('');
-  const [valueNameError, setValueNameError] = useState<string>('');
-  const [valueLastName, setValueLastName] = useState<string>('');
-  const [valueLastNameError, setValueLastNameError] = useState<string>('');
-  const [valueEmail, setValueEmail] = useState<string>('');
-  const [valueEmailError, setValueEmailError] = useState<string>('');
-  const [valuePhone, setValuePhone] = useState<string>('');
-  const [valuePhoneError, setValuePhoneError] = useState<string>('');
-  const [valueTextArea, setValueTextArea] = useState<string>('');
-  const [valueTextAreaError, setValueTextAreaError] = useState<string>('');
+  const [checked, setCheckced] = useState<boolean>(true);
+  const [valueName] = useState<string>('');
+  const [valueLastName] = useState<string>('');
+  const [valueEmail] = useState<string>('');
+  const [valuePhone] = useState<string>('');
+  const [valueTextArea] = useState<string>('');
+  const [success, setSuccess] = useState<boolean>(false);
 
   const handeleCheckBoxChange = (event: { target: { checked: boolean | ((prevState: boolean) => boolean); }; }) => {
     setCheckced(event.target.checked)
   };
-  const onSubmitForm = () => {
-    if (valueName.length < 1) setValueNameError("Pole jest wymagane");
-    if (valueLastName.length < 1) setValueLastNameError("Pole jest wymagane");
-    if (valueEmail.length < 1) setValueEmailError("Pole jest wymagane");
-    if (valuePhone.length < 1) setValuePhoneError("Pole jest wymagane");
-    if (valueTextArea.length < 1) setValueTextAreaError("Pole jest wymagane");
-    console.log("klikam submit")
+  const initialValues  = {
+    name: valueName,
+    lastName: valueLastName,
+    email: valueEmail,
+    phone: valuePhone,
+    message: valueTextArea
   };
-  console.log(valueName)
+  const validationSchema = yup.object({
+    name: yup.string().required("Required").min(3, "Imię musi mieć min 3 znaki").max(20, "Imię może mieć max 20 znaków"),
+    lastName: yup.string().required("Required").min(3, "Nazwisko musi mieć min 3 znaki").max(20, "Nazwisko może mieć max 20 znaków"),
+    email: yup.string().required("Required").email("Adres zawiera błędy"),
+    phone: yup.number().required("Required"),
+    message: yup.string().required("Required").min(3, "Wiadomość musi mieć min 3 znaki").max(200, "Wiadomość może mieć max 200 znaków"),
+  });
+
+  const onSubmit = (values: FormikValues, { resetForm }: any) => {
+    setSuccess(true);
+    setTimeout(() => setSuccess(false), 5000);
+    console.log('Form data', values);
+    resetForm();
+  };
+
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit,
+  });
+
+
   return (
-    <FormWrapper onSubmit={onSubmitForm}>
+    <FormWrapper onSubmit={formik.handleSubmit}>
       <HeaderForm>
         <h3>Napisz do nas</h3>
       </HeaderForm>
@@ -37,47 +55,58 @@ const Form = () => {
         <Input
           placeholder='Imię'
           type='text'
-          value={valueName}
+          value={formik.values.name}
           id='name'
-          onChange={(e: { target: { value: string; }; }) => { setValueName(e.target.value); }}
-          error={valueNameError}
+          onChange={formik.handleChange}
+          error={formik.errors.name}
+          message={formik.errors.name}
+          touched={formik.touched.name}
         />
         <Input
           placeholder='Nazwisko'
           type='text'
-          value={valueLastName}
+          value={formik.values.lastName}
           id='lastName'
-          onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setValueLastName(e.target.value)}
-          error={valueLastNameError}
+          onChange={formik.handleChange}
+          error={formik.errors.lastName}
+          message={formik.errors.lastName}
+          touched={formik.touched.lastName}
         />
       </NameDiv>
       <AddressDiv>
         <Input
           placeholder='Adres e-mail'
           type='text'
-          value={valueEmail}
+          value={formik.values.email}
           id='email'
-          onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setValueEmail(e.target.value)}
-          error={valueEmailError}
+          onChange={formik.handleChange}
+          error={formik.errors.email}
+          message={formik.errors.email}
+          touched={formik.touched.email}
         />
         <Input
           placeholder='Numer telefonu'
           type='text'
-          value={valuePhone}
+          value={formik.values.phone}
           id='phone'
-          onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setValuePhone(e.target.value)}
-          error={valuePhoneError}
+          onChange={formik.handleChange}
+          error={formik.errors.phone}
+          message={formik.errors.phone}
+          touched={formik.touched.phone}
         />
       </AddressDiv>
       <TextDiv>
         <TextArea
           placeholder='Twoja wiadomość'
-          value={valueTextArea}
+          value={formik.values.message}
           id="message"
-          onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setValueTextArea(e.target.value)}
-          error={valueTextAreaError}
+          onChange={formik.handleChange}
+          error={formik.errors.message}
+          message={formik.errors.message}
+          touched={formik.touched.message}
         />
       </TextDiv>
+      { success && <SuccessMessage success='Dane zostały przesłane!' />}
       <CheckDiv>
         <div>
           <CheckBox onChange={handeleCheckBoxChange} checked={checked} />
@@ -85,7 +114,7 @@ const Form = () => {
         <p>Zapoznałem się z regulaminem i wyrażam zgodę na przetwarzanie moich danych osobowych przez Sungroup.pl</p>
       </CheckDiv>
       <ButtonDiv>
-        <Button btnText='Wyślij wiadomość' btnLink='' onClick={onSubmitForm} />
+        <Button btnText='Wyślij wiadomość' btnLink='' onClick={formik.handleSubmit} />
       </ButtonDiv>
     </FormWrapper>
   )

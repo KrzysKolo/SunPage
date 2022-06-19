@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
-export const FormWrapper = styled.section`
+export const FormWrapper = styled.form`
   align-items: flex-end;
   background: ${({ theme }) => theme.color.primary50};
   border-radius: 8px;
@@ -9,22 +9,23 @@ export const FormWrapper = styled.section`
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
+  padding: 48px;
   overflow: hidden;
   width: 90vw;
   ${({ theme }) => theme.mq.desktop} {
-    height: 686px;
+    min-height: 686px;
     max-width: 400;
     padding: 48px;
     width: 100%;
   };
   ${({ theme }) => theme.mq.bigDesktop} {
-    height: 686px;
     padding: 48px;
     width: 664px;
   };
 `;
 
 export const HeaderForm = styled.div`
+  margin: 0 auto;
   min-width: 220px;
   width: 90vw;
   > h3 {
@@ -34,7 +35,7 @@ export const HeaderForm = styled.div`
     font-weight: 600;
     line-height: 42px;
     margin: 0 auto;
-    padding: 20px 15px;
+    padding-bottom: 20px;
     text-align: left;
     width: 90vw;
    };
@@ -64,6 +65,8 @@ export const NameDiv = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0;
+    margin: 0;
     width: 100%;
   };
 `;
@@ -118,6 +121,6 @@ export const CheckDiv = styled.div`
 export const ButtonDiv = styled.div`
   bottom: 15px;
   margin-right: 8px;
-  padding: 30px 0;
+  padding-top: 30px;
   position: relative;
 `;

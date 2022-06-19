@@ -2,13 +2,13 @@ import React from 'react';
 import { ErrorMessageWrapper } from './style';
 
 export type ErrorMessageProps = {
-  error: string;
+  message: string;
 };
 
-const ErrorMessage:React.FC<ErrorMessageProps> = ({ error }) => {
+const ErrorMessage:React.FC<ErrorMessageProps> = ({ message }) => {
   return (
     <ErrorMessageWrapper>
-      {error}
+      {message}
     </ErrorMessageWrapper>
   )
 }

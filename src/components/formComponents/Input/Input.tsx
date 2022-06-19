@@ -8,18 +8,19 @@ export type InputProps = {
   value: string;
   id: string;
   onChange: React.MouseEventHandler<HTMLElement> | any;
-  error: string;
+  error: string | any;
+  message: string | any;
+  touched: string | any;
 }
 
-const Input: React.FC<InputProps> = ({ placeholder, type, value, id, onChange, error }) => {
+const Input: React.FC<InputProps> = ({ placeholder, type, value, id, onChange, error, message, touched }) => {
   console.log(value)
-
 
   return (
     <InputWrapper>
       <Inputs type={type} placeholder={placeholder} value={value} id={id} onChange={onChange}  />
       { value !== "" ? <Label htmlFor={id} >{placeholder}</Label> : "" }
-      { error !== "" ? <ErrorMessage error={error} /> : "" }
+      { error && touched &&  <ErrorMessage message={message} /> }
     </InputWrapper>
   )
 }

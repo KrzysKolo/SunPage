@@ -6,15 +6,21 @@ export const ArticleWithImageWrapper = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 20px 0;
+  padding: 0 5px;
   :nth-child(odd) {
     background: ${({ theme }) => theme.color.primary50};
   };
-  ${({ theme }) => theme.mq.desktop} {
+  ${({ theme }) => theme.mq.tablet} {
+    margin: 0 20px;
+    width: 472px;
     :nth-child(odd) {
     background: transparent;
     };
   };
+  ${({ theme }) => theme.mq.bigDesktop} {
+    margin: 0;
+    width: 432px;
+   };
 `;
 
 export const TextDiv = styled.div`
@@ -24,12 +30,12 @@ export const TextDiv = styled.div`
   height: 180px;
   justify-content: center;
   padding: 12px 0;
-  width: 300px;
+  width: 100%;
   ${({ theme }) => theme.mq.phone} {
     height: 180px;
-    width: 432px;
+    max-width: 300px;
    };
-  ${({ theme }) => theme.mq.bigDesktop} {
+  ${({ theme }) => theme.mq.tablet} {
     height: 180px;
     width: 432px;
    };
@@ -47,14 +53,43 @@ export const ImageDiv = styled.div<PropsGlobalStyle>`
   background-image: ${(props) => props.image ? `url(${props.image})` : `url('../../../assets/images/errorSmall.jpg')`};
   background-position: center;
   border-radius: 8px;
-  height: 180px;
+  height: 100%;
   margin: 0;
+  max-width: 300px;
+  object-fit: cover;
   padding: 0
-  width: 300px;
+  width: 100%;
+  > img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  };
  ${({ theme }) => theme.mq.phone} {
-   height: 320px;
-   width: 432px;
+   height: 100%;
+   max-width: 300px;
+   > img {
+     object-fit: cover;
+     width: 100%;
+   }
    };
+ ${({ theme }) => theme.mq.tablet} {
+   height: 320px;
+   max-width: 432px;
+   object-fit: cover;
+   > img {
+     object-fit: cover;
+     width: 432px;
+   }
+  };
+ ${({ theme }) => theme.mq.bigDesktop} {
+   height: 320px;
+   width: 432%;
+   object-fit: cover;
+   > img {
+     object-fit: cover;
+     width: 432px;
+   }
+  };
 `;
 
 export const DateDiv = styled.div`

@@ -1,9 +1,29 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const sliding = keyframes`
+   from {
+      transform: translateX(20%);
+   }
+   to {transform: translateX(-95%)}
+`;
+const slidingMediumDesktop = keyframes`
+   from {
+      transform: translateX(10%);
+   }
+   to {transform: translateX(-75%)}
+`;
+const slidingDeskopt = keyframes`
+   from {
+      transform: translateX(15%);
+   }
+   to {transform: translateX(-25%)}
+`;
 
 export const Section = styled.section`
   background: ${({ theme }) => theme.color.beige};
   padding: 128px 0;
 `;
+
 export const SectionFourWrapper = styled.div`
   align-items: center;
   display: flex;
@@ -40,6 +60,20 @@ export const HeaderDiv = styled.div`
     width: 1360px;
    };
 `;
+export const ArticleMask = styled.div`
+  width: 96%;
+  ${({ theme }) => theme.mq.phone} {
+    width: 90vw;
+  };
+  ${({ theme }) => theme.mq.tablet} {
+    max-width: 1360px;
+    overflow: hidden;
+    margin: 0 auto;
+   };
+  ${({ theme }) => theme.mq.bigDesktop} {
+    width: 1360px;
+   };
+`;
 
 export const ArticleWrapper = styled.section`
   align-items: center;
@@ -50,10 +84,21 @@ export const ArticleWrapper = styled.section`
   ${({ theme }) => theme.mq.phone} {
     width: 90vw;
   };
-  ${({ theme }) => theme.mq.bigDesktop} {
+  ${({ theme }) => theme.mq.tablet} {
+    animation: ${sliding} 14s linear alternate-reverse infinite;
     align-items: space-between;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+   };
+   ${({ theme }) => theme.mq.mediumDesktop} {
+    animation: ${slidingMediumDesktop} 10s linear alternate-reverse infinite;
+   };
+  ${({ theme }) => theme.mq.desktop} {
+    animation: ${slidingDeskopt} 6s linear alternate-reverse infinite;
+   };
+  ${({ theme }) => theme.mq.bigDesktop} {
+    animation: none;
     width: 1360px;
    };
 `;

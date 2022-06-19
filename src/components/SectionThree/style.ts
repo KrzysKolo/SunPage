@@ -14,7 +14,7 @@ export const SectionThreeWrapper = styled.article`
   justify-content: center;
   margin: 0 auto;
   padding: 5rem;
-  width: 90vw;
+  width: 100vw;
   ${({ theme }) => theme.mq.tablet} {
     padding: 40px 0;
   };
@@ -43,7 +43,10 @@ export const ArrowTextDiv = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 100vw;
+  ${({ theme }) => theme.mq.tablet} {
+    width: 90vw;
+  };
 `;
 export const CarouselDiv = styled.div`
   width: 100%;

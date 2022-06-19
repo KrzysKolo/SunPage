@@ -62,6 +62,10 @@ export const HeaderDiv = styled.div`
 `;
 export const ArticleMask = styled.div`
   width: 96%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
   ${({ theme }) => theme.mq.phone} {
     width: 90vw;
   };

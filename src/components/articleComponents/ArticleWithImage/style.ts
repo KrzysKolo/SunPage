@@ -6,6 +6,7 @@ export const ArticleWithImageWrapper = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin: 0;
   padding: 0 5px;
   :nth-child(odd) {
     background: ${({ theme }) => theme.color.primary50};
@@ -54,7 +55,7 @@ export const ImageDiv = styled.div<PropsGlobalStyle>`
   background-position: center;
   border-radius: 8px;
   height: 100%;
-  margin: 0;
+  margin: 0 auto;
   max-width: 300px;
   object-fit: cover;
   padding: 0

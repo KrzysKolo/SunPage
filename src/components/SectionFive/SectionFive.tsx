@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from '../Button';
 import { Section, SectionFiveWrapper, TextH3, TextP, TextH2 } from './style';
 
@@ -15,4 +14,4 @@ const SectionFive = () => {
   )
 }
 
-export default SectionFive
+export default SectionFive;

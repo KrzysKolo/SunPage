@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, SectionSixWrapper, ImageDiv, FormDiv } from './style';
 import image from '../../assets/images/Image2.jpg';
 import Form from '../Form';

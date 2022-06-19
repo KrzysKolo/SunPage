@@ -10,12 +10,17 @@ export type MenuDivSmallProps = {
   setClick: Dispatch<SetStateAction<boolean>>,
 };
 
-const MenuDivSmall: React.FC<MenuDivSmallProps> = ({ showSmallMenu, setShowSmallMenu, click, setClick }) => {
+const MenuDivSmall: React.FC<MenuDivSmallProps> = ({
+  showSmallMenu,
+  setShowSmallMenu,
+  click,
+  setClick }) => {
 
   const handleClose = () => {
     setShowSmallMenu(!showSmallMenu);
     setClick(!click);
-}
+  };
+
   return (
     <MenuDivSmallWrapper showSmallMenu={showSmallMenu}>
       <ul>

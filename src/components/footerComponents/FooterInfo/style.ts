@@ -71,7 +71,7 @@ export const SMMenuUl = styled.ul`
    ${({ theme }) => theme.mq.tablet} {
     display: flex;
     flex-direction: row;
-    };
+  };
 `;
 
 

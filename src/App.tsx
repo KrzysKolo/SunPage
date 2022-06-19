@@ -6,6 +6,7 @@ import { Footer, NavMenu } from './components';
 import './App.css';
 import { GlobalStyle } from './assets/styles/GlobalStyles';
 import { theme } from './assets/styles/theme';
+import NotFound from './pages/NotFound';
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/kontakt" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>

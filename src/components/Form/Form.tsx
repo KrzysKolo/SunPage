@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from '../Button';
 import { CheckBox, Input, SuccessMessage, TextArea } from '../formComponents';
 import { FormWrapper, NameDiv, AddressDiv, TextDiv, CheckDiv, HeaderForm, ButtonDiv } from './style'
@@ -6,6 +6,7 @@ import {  FormikValues, useFormik } from "formik";
 import * as yup from "yup";
 
 const Form = () => {
+
   const [checked, setCheckced] = useState<boolean>(true);
   const [valueName] = useState<string>('');
   const [valueLastName] = useState<string>('');
@@ -24,6 +25,7 @@ const Form = () => {
     phone: valuePhone,
     message: valueTextArea
   };
+
   const validationSchema = yup.object({
     name: yup.string().required("Required").min(3, "Imię musi mieć min 3 znaki").max(20, "Imię może mieć max 20 znaków"),
     lastName: yup.string().required("Required").min(3, "Nazwisko musi mieć min 3 znaki").max(20, "Nazwisko może mieć max 20 znaków"),
@@ -44,7 +46,6 @@ const Form = () => {
     validationSchema,
     onSubmit,
   });
-
 
   return (
     <FormWrapper onSubmit={formik.handleSubmit}>

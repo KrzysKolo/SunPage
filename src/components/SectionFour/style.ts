@@ -6,12 +6,14 @@ const sliding = keyframes`
    }
    to {transform: translateX(-95%)}
 `;
+
 const slidingMediumDesktop = keyframes`
    from {
       transform: translateX(10%);
    }
    to {transform: translateX(-75%)}
 `;
+
 const slidingDeskopt = keyframes`
    from {
       transform: translateX(15%);

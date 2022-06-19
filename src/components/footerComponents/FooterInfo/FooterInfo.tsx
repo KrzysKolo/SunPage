@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { TextFooter } from '../../textDivComponents';
 import { Container, FooterInfoDiv, DockDiv, SMMenuUl } from './style';
@@ -7,6 +6,7 @@ import tweet from '../../../assets/images/SocialButton-1.png';
 import ln from '../../../assets/images/SocialButton-2.png';
 
 const FooterInfo = () => {
+
   return (
     <Container>
       <FooterInfoDiv>

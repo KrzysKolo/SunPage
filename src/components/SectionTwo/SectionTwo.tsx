@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArticleWithButton } from '../articleComponents';
 import { SectionTwoWrapper } from './style';
 import image1 from './../../assets/images/Image1.jpg';
@@ -7,7 +6,6 @@ import image3 from './../../assets/images/Image3.jpg';
 
 const SectionTwo = () => {
   return (
-
     <SectionTwoWrapper>
       <ArticleWithButton
         text='But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.'

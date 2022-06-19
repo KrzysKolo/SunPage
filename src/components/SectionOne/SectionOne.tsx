@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container } from '../../assets/styles/styles';
 import { SubTitleSection, TitleSection } from '../titleComponents';
 import { ArticleWithIcon } from '../articleComponents/';

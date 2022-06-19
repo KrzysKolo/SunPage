@@ -22,7 +22,7 @@ const HomeHeader:React.FC = () => {
       </HeaderDiv>
       <ImgDiv>
         <img src={imageSmall} alt='Image' className='small' />
-        <img src={imageSmall} alt='Image' className='big'/>
+        <img src={imageBig} alt='Image' className='big'/>
         <div>
           <h1>
             Nagłówek traktujący o działalności firmy

@@ -17,7 +17,7 @@ export const SectionThreeWrapper = styled.article`
   width: 100vw;
   ${({ theme }) => theme.mq.tablet} {
     padding: 40px 0;
-  };
+   };
   ${({ theme }) => theme.mq.desktop} {
     padding: 60px 0;
     max-width: 1360px;
@@ -47,9 +47,16 @@ export const ArrowTextDiv = styled.div`
   ${({ theme }) => theme.mq.tablet} {
     width: 90vw;
   };
+  ${({ theme }) => theme.mq.bigDesktop} {
+    margin: 0 auto;
+    width: 1360px;
+  };
 `;
 export const CarouselDiv = styled.div`
   width: 100%;
+  ${({ theme }) => theme.mq.tablet} {
+   padding: 0 5rem;
+  };
 `;
 
 export const ArrowDiv = styled.div`

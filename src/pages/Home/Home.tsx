@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container } from '../../assets/styles/styles';
 import { HomeHeader, SectionOne, SectionThree, SectionTwo, SectionFour, SectionFive, SectionSix} from '../../components';
 

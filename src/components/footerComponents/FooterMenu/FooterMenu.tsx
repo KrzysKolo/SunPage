@@ -1,9 +1,9 @@
-import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Container, FooterMenuDiv, ImageDiv, MenuUl } from './style';
 import sunPage from '../../../assets/svgs/SunPage.svg';
 
 const FooterMenu = () => {
+
   return (
     <Container>
       <FooterMenuDiv>

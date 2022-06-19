@@ -14,7 +14,6 @@ export type InputProps = {
 }
 
 const Input: React.FC<InputProps> = ({ placeholder, type, value, id, onChange, error, message, touched }) => {
-  console.log(value)
 
   return (
     <InputWrapper>

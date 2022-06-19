@@ -14,7 +14,17 @@ export type ArticleWithButtonProps = {
   altText: string,
   side?: string,
 };
-const ArticleWithButton:React.FC<ArticleWithButtonProps> = ({ text, title, subTitle, image, altText, btnText, outLine, btnLink, side }) => {
+
+const ArticleWithButton: React.FC<ArticleWithButtonProps> = ({
+  text,
+  title,
+  subTitle,
+  image,
+  altText,
+  btnText,
+  btnLink,
+  side }) => {
+
   return (
     <>
       <ArticleWithButtonWrapper side={side}>

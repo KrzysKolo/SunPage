@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArticleWithImage } from '../articleComponents';
 import Button from '../Button';
 import { Section, SectionFourWrapper, HeaderDiv, ArticleWrapper, ArticleMask } from './style';

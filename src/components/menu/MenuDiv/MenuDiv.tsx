@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { MenuDivWrapper } from './style';
 import Button from '../../Button/';

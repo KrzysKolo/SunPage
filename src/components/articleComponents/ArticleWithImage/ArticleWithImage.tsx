@@ -12,7 +12,12 @@ export type ArticleWithImageProps = {
   dateOfEntry: string
 }
 
-const ArticleWithImage:React.FC<ArticleWithImageProps> = ({ image, title, titleCategory, text, dateOfEntry }) => {
+const ArticleWithImage: React.FC<ArticleWithImageProps> = ({
+  image,
+  title,
+  titleCategory,
+  text,
+  dateOfEntry }) => {
 
   return (
     <ArticleWithImageWrapper>

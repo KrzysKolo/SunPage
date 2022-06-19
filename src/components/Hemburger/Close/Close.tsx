@@ -1,4 +1,3 @@
-import React from 'react';
 import { WrapperClose } from './style';
 
 const Close = () => {
@@ -7,4 +6,4 @@ const Close = () => {
   )
 }
 
-export default Close
+export default Close;

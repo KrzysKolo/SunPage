@@ -7,6 +7,7 @@ export interface PropsGlobalStyle {
   image?: string;
   checked?: boolean;
   value?: string;
+  error?: string;
 };
 
 export const GlobalStyle = createGlobalStyle`

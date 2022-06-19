@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ErrorMessage from '../ErrorMessage';
 import { InputWrapper, Label, Inputs } from './style';
 
@@ -18,7 +18,7 @@ const Input: React.FC<InputProps> = ({ placeholder, type, value, id, onChange, e
 
   return (
     <InputWrapper>
-      <Inputs type={type} placeholder={placeholder} value={value} id={id} onChange={onChange}  />
+      <Inputs type={type} placeholder={placeholder} value={value} id={id} onChange={onChange} />
       { value !== "" ? <Label htmlFor={id} >{placeholder}</Label> : "" }
       { error && touched &&  <ErrorMessage message={message} /> }
     </InputWrapper>

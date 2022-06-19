@@ -46,7 +46,6 @@ export const Inputs = styled.input<PropsGlobalStyle>`
     border: 1px solid ${({ theme }) => theme.color.primary500};
   };
   &:focus + ${Label} {
-    color: blue;
     font-size: 14px;
     padding: 0 3px;
     top: -15px;
@@ -59,10 +58,7 @@ export const Inputs = styled.input<PropsGlobalStyle>`
     padding: 0 3px;
     text-align: left;
     top: 5px;
-  };
-  &:invalid {
-    border: 1px solid ${({ theme }) => theme.color.red};
-  };
+   };
   ::placeholder {
     color: ${({ theme }) => theme.color.grey700};
     font-family: ${({ theme }) => theme.font.family.inter};
@@ -81,4 +77,3 @@ export const Inputs = styled.input<PropsGlobalStyle>`
    width: 274px;
   };
   `;
-
